@@ -278,36 +278,12 @@ h3 {
   color: var(--muted);
 }
 
-.card-icon,
-.platform-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
+.card-icon {
+  display: block;
+  width: 56px;
+  height: 56px;
   border-radius: 8px;
   margin-bottom: 18px;
-  color: #ffffff;
-  font-weight: 900;
-}
-
-.card-icon.windows,
-.platform-mark.windows {
-  background: var(--blue);
-}
-
-.card-icon.macos,
-.platform-mark.macos {
-  background: var(--surface-strong);
-}
-
-.card-icon.linux,
-.platform-mark.linux {
-  background: var(--orange);
-}
-
-.card-icon {
-  background: var(--accent);
 }
 
 .download-card .download-button,
@@ -344,8 +320,8 @@ h3 {
 .platform-heading .platform-mark {
   width: 42px;
   height: 42px;
+  border-radius: 8px;
   margin-bottom: 0;
-  font-size: 0.78rem;
 }
 
 .platform-heading h3 {

@@ -5,7 +5,7 @@ const platforms = [
   {
     id: "windows",
     label: "Windows",
-    shortLabel: "Win",
+    icon: "assets/platform-windows.svg",
     description: "MSI installer for Windows x64.",
     pattern: /windows-x64\.msi$/i,
     unavailableLatest: "Coming soon",
@@ -14,7 +14,7 @@ const platforms = [
   {
     id: "macos",
     label: "macOS",
-    shortLabel: "Mac",
+    icon: "assets/platform-macos.svg",
     description: "DMG package for Apple Silicon and supported macOS builds.",
     pattern: /macos-.*\.dmg$/i,
     unavailableLatest: "Coming soon",
@@ -23,7 +23,7 @@ const platforms = [
   {
     id: "linux",
     label: "Linux",
-    shortLabel: "Deb",
+    icon: "assets/platform-linux.svg",
     description: "DEB package for Debian and Ubuntu compatible distributions.",
     pattern: /linux-.*\.deb$/i,
     unavailableLatest: "Coming soon",
@@ -84,7 +84,6 @@ function renderDownloads(release) {
 
 function renderDownloadCard(platform, asset) {
   const safeLabel = escapeHtml(platform.label);
-  const iconClass = `card-icon ${platform.id}`;
   const action = asset
     ? `<a class="download-button" href="${escapeAttribute(asset.browser_download_url)}">Download ${safeLabel}</a>`
     : `<span class="unavailable">${platform.unavailableLatest}</span>`;
@@ -92,7 +91,7 @@ function renderDownloadCard(platform, asset) {
 
   return `
     <article class="download-card">
-      <span class="${iconClass}">${escapeHtml(platform.shortLabel)}</span>
+      <img class="card-icon" src="${escapeAttribute(platform.icon)}" alt="" width="56" height="56">
       <h3>${safeLabel}</h3>
       <p>${escapeHtml(platform.description)}</p>
       ${size}
