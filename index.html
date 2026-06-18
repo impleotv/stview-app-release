@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>STView Downloads</title>
+    <meta
+      name="description"
+      content="Download STView for Windows, macOS, and Linux. Browse release history and installation instructions."
+    >
+    <link rel="icon" href="assets/stview-icon.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="STView downloads home">
+        <img src="assets/stview-icon.png" alt="" width="40" height="40">
+        <span>STView</span>
+      </a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="#downloads">Downloads</a>
+        <a href="#install">Install</a>
+        <a href="#versions">Versions</a>
+        <a href="https://github.com/impleotv/stview-app-release/releases">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Release downloads</p>
+          <h1 id="hero-title">STView</h1>
+          <p class="hero-text">
+            A desktop video analysis application for STANAG and motion imagery workflows,
+            packaged for Windows, macOS, and Linux.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#downloads">Download latest</a>
+            <a class="button secondary" href="#install">Install instructions</a>
+          </div>
+        </div>
+
+        <aside class="release-panel" aria-label="Latest release summary">
+          <div class="release-panel-top">
+            <img src="assets/stview-icon.png" alt="" width="56" height="56">
+            <div>
+              <p class="panel-label">Latest stable</p>
+              <p class="latest-version" data-latest-version>Loading...</p>
+            </div>
+          </div>
+          <dl class="release-meta">
+            <div>
+              <dt>Published</dt>
+              <dd data-latest-date>Checking GitHub releases</dd>
+            </div>
+            <div>
+              <dt>Repository</dt>
+              <dd>impleotv/stview-app-release</dd>
+            </div>
+          </dl>
+          <a class="text-link" data-latest-notes href="https://github.com/impleotv/stview-app-release/releases">
+            View release notes
+          </a>
+        </aside>
+      </section>
+
+      <section id="downloads" class="section downloads-section" aria-labelledby="downloads-title">
+        <div class="section-heading">
+          <p class="eyebrow">Downloads</p>
+          <h2 id="downloads-title">Latest installers</h2>
+          <p>
+            The links below are loaded from the latest stable GitHub release. Missing packages
+            appear as unavailable until they are published.
+          </p>
+        </div>
+        <div class="download-grid" data-download-grid aria-live="polite">
+          <article class="download-card skeleton">
+            <div class="card-icon"></div>
+            <h3>Checking releases</h3>
+            <p>Loading current STView packages from GitHub.</p>
+          </article>
+        </div>
+        <p class="status-message" data-status-message role="status"></p>
+      </section>
+
+      <section id="install" class="section install-section" aria-labelledby="install-title">
+        <div class="section-heading">
+          <p class="eyebrow">Setup</p>
+          <h2 id="install-title">Install instructions</h2>
+        </div>
+        <div class="install-grid">
+          <article class="install-card">
+            <div class="platform-heading">
+              <span class="platform-mark windows">Win</span>
+              <h3>Windows</h3>
+            </div>
+            <ol>
+              <li>Download the Windows MSI package.</li>
+              <li>Open the installer and follow the prompts.</li>
+              <li>Launch STView from the Start menu or desktop shortcut.</li>
+            </ol>
+          </article>
+
+          <article class="install-card">
+            <div class="platform-heading">
+              <span class="platform-mark macos">Mac</span>
+              <h3>macOS</h3>
+            </div>
+            <ol>
+              <li>Download the macOS DMG package when available.</li>
+              <li>Open the DMG and drag STView into Applications.</li>
+              <li>If Gatekeeper prompts, confirm the signed ImpleoTV application before opening.</li>
+            </ol>
+          </article>
+
+          <article class="install-card">
+            <div class="platform-heading">
+              <span class="platform-mark linux">Deb</span>
+              <h3>Linux</h3>
+            </div>
+            <ol>
+              <li>Download the Linux DEB package when available.</li>
+              <li>Install it with <code>sudo apt install ./STView-...linux-amd64.deb</code>.</li>
+              <li>If using <code>dpkg -i</code>, run <code>sudo apt -f install</code> to repair missing dependencies.</li>
+            </ol>
+          </article>
+        </div>
+      </section>
+
+      <section id="versions" class="section versions-section" aria-labelledby="versions-title">
+        <div class="section-heading">
+          <p class="eyebrow">Archive</p>
+          <h2 id="versions-title">Older versions</h2>
+          <p>Stable release history with direct installer links when assets exist.</p>
+        </div>
+        <div class="versions-table-wrap">
+          <table class="versions-table">
+            <thead>
+              <tr>
+                <th scope="col">Version</th>
+                <th scope="col">Published</th>
+                <th scope="col">Downloads</th>
+                <th scope="col">Notes</th>
+              </tr>
+            </thead>
+            <tbody data-version-rows>
+              <tr>
+                <td colspan="4">Loading release history...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>STView by ImpleoTV</span>
+      <a href="https://github.com/impleotv/stview-app">Application source</a>
+      <a href="https://github.com/impleotv/stview-app-release/releases">GitHub releases</a>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
